@@ -15,10 +15,10 @@
     </c:choose>
     <c:choose>
         <c:when test="${action.equals('home') || action == null}">
-            <a href="/index.html" class="_disabled">Home</a>
+            <a href="/" class="_disabled">Home</a>
         </c:when>
         <c:otherwise>
-            <a href="/index.html">Home</a>
+            <a href="/">Home</a>
         </c:otherwise>
     </c:choose>
     <c:choose>

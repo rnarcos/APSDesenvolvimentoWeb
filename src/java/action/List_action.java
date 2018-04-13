@@ -21,6 +21,7 @@ public class List_action extends HttpServlet {
         String action = Request.getParameter("action") == null? "list": Request.getParameter("action");
         if (!action.equals("list_consultas")) {
             RequestDispatcher Redirect = Request.getRequestDispatcher("/list/list.jsp");
+            Request.setAttribute("action", "list");
             Redirect.forward(Request, Response);
         } else {
             try {

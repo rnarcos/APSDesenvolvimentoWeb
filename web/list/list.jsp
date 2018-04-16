@@ -13,19 +13,6 @@
     <body>
         <%@include file="/assets/pages/navigation.jsp"%>
         <div id="main">
-            <table>
-                <thead>
-                    <tr>
-                        <td>Medico</td>
-                        <td>Especialidade</td>
-                        <td>Paciente</td>
-                        <td>Data</td>
-                        <td>Convenio</td>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
         </div>
     </body>
 </html>

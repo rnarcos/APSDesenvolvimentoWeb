@@ -5,7 +5,7 @@
 <html>
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="/assets/pages/js/nav.js" type="text/javascript"></script>
+        <script src="/assets/pages/js/navigation.js" type="text/javascript"></script>
         <link rel="stylesheet" href="/schedule/css/schedule.css">
         <script type="text/javascript" src="/schedule/js/schedule.js"></script>
         <title>Clinica Médica</title>
@@ -15,7 +15,7 @@
         <div id="main">
     <c:choose>
         <c:when test="${especialidade == null}">
-            <form method="POST" class="form-style-7" id="schedule_form">
+            <form method="POST" class="form" id="schedule_form">
                 <input type="hidden" id="action" name="action" value="${action}"/>
                 <ul>
                     <li>
@@ -31,7 +31,7 @@
             </form>
         </c:when>
         <c:when test="${paciente == null}">
-            <form method="POST" class="form-style-7">
+            <form method="POST" class="form">
                 <input type="hidden" id="action" name="action" value="${action}"/>
                 <input type="hidden" id="especialidade" name="especialidade" value="${especialidade}"/>
                 <ul>
@@ -62,10 +62,10 @@
                 </ul>
             </form>
         </c:when>
-        <c:when test="${action == 'list_success'}">
-            Agendado com sucesso!
+        <c:when test="${action == 'schedule_success'}">
+            Parabéns, a consulta foi agendada com sucesso
         </c:when>
-        <c:when test="${action == 'list_fail'}">
+        <c:when test="${action == 'schedule_fail'}">
             Falha no agendamento!
         </c:when>
         <c:otherwise>

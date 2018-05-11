@@ -5,7 +5,7 @@
 <html>
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="/assets/pages/js/nav.js" type="text/javascript"></script>
+        <script src="/assets/pages/js/navigation.js" type="text/javascript"></script>
         <link rel="stylesheet" href="/list/css/list.css">
         <script type="text/javascript" src="/list/js/list.js"></script>
         <title>Clinica Médica</title>

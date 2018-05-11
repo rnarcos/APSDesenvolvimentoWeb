@@ -1,0 +1,33 @@
+@import '/assets/pages/css/navigation.css';
+
+table, td, th {	
+    border: 1px solid #ddd;
+    text-align: left;
+    cursor: default;
+}
+
+table {
+    overflow: hidden;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    position: relative;
+    padding: 15px;
+}
+
+thead > tr > td:hover, tbody > tr:hover {
+    background-color: #edeff2;
+}
+
+td:hover::after, th:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #edeff2;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+}

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package action;
 
 import Database.Manager;
@@ -35,7 +30,7 @@ public class Schedule_action extends HttpServlet {
         switch (action) {
             case "list_especialidades":
                 try {
-                    String json = new Gson().toJson(new Manager().getEspecialidadesList());
+                    String json = new Gson().toJson(Manager.getEspecialidadesList());
                     Response.setContentType("application/json");
                     Response.setCharacterEncoding("UTF-8");
                     Response.getWriter().write(json);
@@ -81,9 +76,9 @@ public class Schedule_action extends HttpServlet {
             try {
                 boolean consultaCriada = createConsulta(medico, especialidade, paciente, data_consulta, convenio);
                 if (consultaCriada) {
-                    Request.setAttribute("action", "list_success");
+                    Request.setAttribute("action", "schedule_success");
                 } else {
-                    Request.setAttribute("action", "list_failed");
+                    Request.setAttribute("action", "schedule_failed");
                 }
             } catch (SQLException | ClassNotFoundException ex) {
                 Logger.getLogger(Schedule_action.class.getName()).log(Level.SEVERE, null, ex);
@@ -95,15 +90,15 @@ public class Schedule_action extends HttpServlet {
     }
     
     public List<String> getEspecialidadesList() throws SQLException, ClassNotFoundException {
-        return new Manager().getEspecialidadesList();
+        return Manager.getEspecialidadesList();
     }
     
     public List<String> getMedicosNameListFromEspecialidade(String especialidade) throws SQLException, ClassNotFoundException {
-        return new Manager().getMedicosNameListFromEspecialidade(especialidade);
+        return Manager.getMedicosNameListFromEspecialidade(especialidade);
     }
     
     
     public boolean createConsulta(String medico, String especialidade, String paciente, String data_consulta, String convenio) throws SQLException, ClassNotFoundException {
-        return new Manager().createConsulta(medico, especialidade, paciente, data_consulta, convenio);
+        return Manager.createConsulta(medico, especialidade, paciente, data_consulta, convenio);
     }
 }

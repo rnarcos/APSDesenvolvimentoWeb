@@ -1,6 +1,6 @@
 @import '/assets/pages/css/navigation.css';
 
-.form{
+.formulario{
     max-width:400px;
     margin:50px auto;
     background:#fff;
@@ -8,7 +8,7 @@
     padding:20px;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
-.form h1{
+.formulario h1{
     display: block;
     text-align: center;
     padding: 0;
@@ -16,24 +16,24 @@
     color: #5C5C5C;
     font-size:x-large;
 }
-.form ul{
+.formulario ul{
     list-style:none;
     padding:0;
     margin:0;   
 }
-.form li{
+.formulario li{
     display: block;
     padding: 9px;
     border:1px solid #DDDDDD;
     margin-bottom: 30px;
     border-radius: 3px;
 }
-.form li:last-child{
+.formulario li:last-child{
     border:none;
     margin-bottom: 0px;
     text-align: center;
 }
-.form li > label{
+.formulario li > label{
     display: block;
     float: left;
     margin-top: -19px;
@@ -44,19 +44,22 @@
     font-size: 14px;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    font-weight: 100;
 }
-.form input[type="text"],
-.form input[type="date"],
-.form input[type="datetime"],
-.form input[type="datetime-local"],
-.form input[type="email"],
-.form input[type="number"],
-.form input[type="search"],
-.form input[type="time"],
-.form input[type="url"],
-.form input[type="password"],
-.form textarea,
-.form select {
+.formulario input[type="text"],
+.formulario input[type="date"],
+.formulario input[type="datetime"],
+.formulario input[type="datetime-local"],
+.formulario input[type="email"],
+.formulario input[type="number"],
+.formulario input[type="search"],
+.formulario input[type="time"],
+.formulario input[type="url"],
+.formulario input[type="password"],
+.formulario textarea,
+.formulario select {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -71,20 +74,20 @@
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.form input[type="text"]:focus,
-.form input[type="date"]:focus,
-.form input[type="datetime"]:focus,
-.form input[type="datetime-local"]:focus,
-.form input[type="email"]:focus,
-.form input[type="number"]:focus,
-.form input[type="search"]:focus,
-.form input[type="time"]:focus,
-.form input[type="url"]:focus,
-.form input[type="password"]:focus,
-.form textarea:focus,
-.form select:focus {}
+.formulario input[type="text"]:focus,
+.formulario input[type="date"]:focus,
+.formulario input[type="datetime"]:focus,
+.formulario input[type="datetime-local"]:focus,
+.formulario input[type="email"]:focus,
+.formulario input[type="number"]:focus,
+.formulario input[type="search"]:focus,
+.formulario input[type="time"]:focus,
+.formulario input[type="url"]:focus,
+.formulario input[type="password"]:focus,
+.formulario textarea:focus,
+.formulario select:focus {}
 
-.form li > span {
+.formulario li > span {
     background: #F3F3F3;
     display: block;
     padding: 3px;
@@ -94,10 +97,10 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
 }
-.form textarea {
+.formulario textarea {
     resize:none;
 }
-.form input[type="submit"], .form input[type="button"] {
+.formulario input[type="submit"], .formulario input[type="button"] {
     background: #2471FF;
     border: none;
     padding: 10px 20px 10px 20px;
@@ -106,7 +109,7 @@
     color: #D2E2FF;
 }
 
-.form input[type="submit"]:hover, .form input[type="button"]:hover {
+.formulario input[type="submit"]:hover, .formulario input[type="button"]:hover {
     background: #6B9FFF;
     color:#fff;
 }

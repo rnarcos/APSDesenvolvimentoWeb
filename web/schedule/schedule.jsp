@@ -6,6 +6,7 @@
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="/assets/pages/js/navigation.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="/schedule/css/schedule.css">
         <script type="text/javascript" src="/schedule/js/schedule.js"></script>
         <title>Clinica Médica</title>
@@ -15,7 +16,7 @@
         <div id="main">
     <c:choose>
         <c:when test="${especialidade == null}">
-            <form method="POST" class="form" id="schedule_form">
+            <form method="POST" class="formulario" id="schedule_form">
                 <input type="hidden" id="action" name="action" value="${action}"/>
                 <ul>
                     <li>
@@ -31,7 +32,7 @@
             </form>
         </c:when>
         <c:when test="${paciente == null}">
-            <form method="POST" class="form">
+            <form method="POST" class="formulario">
                 <input type="hidden" id="action" name="action" value="${action}"/>
                 <input type="hidden" id="especialidade" name="especialidade" value="${especialidade}"/>
                 <ul>
@@ -63,10 +64,16 @@
             </form>
         </c:when>
         <c:when test="${action == 'schedule_success'}">
-            Parabéns, a consulta foi agendada com sucesso
+            <div class="alert alert-success alert-dismissible">
+                <a href="/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Sucesso</strong> Sua consulta foi agendada!
+            </div>
         </c:when>
         <c:when test="${action == 'schedule_fail'}">
-            Falha no agendamento!
+            <div class="alert alert-danger alert-dismissible">
+                <a href="/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Erro</strong> Houve uma falha no agendamento da consulta!
+            </div>
         </c:when>
         <c:otherwise>
             Voce nao devia estar nessa pagina!

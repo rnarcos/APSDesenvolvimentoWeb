@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 if (data.length === 0) {
                     console.warn('I don\'t have any data to show.');
                 } else {
+                    document.getElementById('emptyListAlert').remove();
                     let table, thead, tbody, tr, td;
                     table = document.createElement('table');
                     thead = document.createElement('thead');

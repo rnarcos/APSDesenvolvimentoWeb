@@ -39,7 +39,7 @@
     </c:choose>
 </div>
 <div id ="title">
-	<span id="navButton" onclick="toggleNav()">&#9776; Menu</span>
-	<span class="companyName">Clínica Médica</span>
+    <span id="navButton" onclick="toggleNav()">&#9776; Menu</span>
+    <span id="companyName">Clínica Médica</span>
 </div>
             

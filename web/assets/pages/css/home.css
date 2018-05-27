@@ -1,1 +1,8 @@
 @import '/assets/pages/css/navigation.css';
+
+img {
+    width: 100%;
+    position:  relative;
+    right: 30px;
+    bottom: 8px;
+}

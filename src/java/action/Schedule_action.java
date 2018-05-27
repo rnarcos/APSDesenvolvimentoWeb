@@ -72,7 +72,6 @@ public class Schedule_action extends HttpServlet {
         Request.setAttribute("data_consulta", data_consulta);
         Request.setAttribute("convenio", convenio);
         if (especialidade != null && medico != null && paciente != null && data_consulta != null && convenio != null) {
-            
             try {
                 boolean consultaCriada = createConsulta(medico, especialidade, paciente, data_consulta, convenio);
                 if (consultaCriada) {

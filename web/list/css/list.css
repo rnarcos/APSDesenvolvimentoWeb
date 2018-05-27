@@ -3,6 +3,7 @@
 table, td, th {	
     border: 1px solid #ddd;
     text-align: left;
+    margin-top: 15px;
     cursor: default;
 }
 
@@ -18,10 +19,10 @@ td, th {
 }
 
 thead > tr > td:hover, tbody > tr:hover {
-    background-color: #edeff2;
+    /*background-color: #edeff2;*/
 }
 
-td:hover::after, th:hover::after {
+thead > tr > td:hover::after {
     content: "";
     position: absolute;
     background-color: #edeff2;
@@ -30,4 +31,8 @@ td:hover::after, th:hover::after {
     height: 10000px;
     width: 100%;
     z-index: -1;
+}
+
+tbody > tr:hover {
+    background-color: #edeff2;
 }
